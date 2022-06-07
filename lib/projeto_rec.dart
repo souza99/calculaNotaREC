@@ -40,10 +40,7 @@ void main(List<String> arguments) {
   if (opcao == 3) verificarAprovacao(nota1, nota2, calcularMenorNota);
 
   if (opcao == 4)
-    verificarAprovacao(nota1, nota2, () {
-      var media = ((nota1 * 2) + nota2) / 3;
-      return media;
-    });
+    verificarAprovacao(nota1, nota2, (nota1,nota2) => ((nota1 * 2) + nota2) / 3);
 }
 
 String verificarAprovacao(double nota1, double nota2, Function definirMedia) {
