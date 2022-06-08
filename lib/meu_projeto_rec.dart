@@ -31,7 +31,16 @@ void main(List<String> aguments) {
   print("Qual a largura do pacote ?");
   String? RespostaLarguraDoPacote = stdin.readLineSync();
   comprimentoDoPacote = double.parse(RespostaLarguraDoPacote!);
+
+
+  print("Qual a altura do pacote ?");
+  String? RespostaAlturaDoPacote = stdin.readLineSync();
+  alturaDoPacote = double.parse(RespostaAlturaDoPacote!);
 }
+
+
+
+
 
 calculaValorTotalDaCompra(
     double comprimentoDoPacote,
@@ -48,6 +57,12 @@ calculaValorTotalDaCompra(
   double valorTotalCompra = valorFrete + valorProdutoComDesconto;
 }
 
+
+
+
+
+
+
 double calculaFrete(
     double comprimentoDoPacote, double larguraDoPacote, double alturaDoPacote) {
   if (comprimentoDoPacote <= 0 || larguraDoPacote <= 0 || alturaDoPacote <= 0)
@@ -58,6 +73,11 @@ double calculaFrete(
 
   return precoFrete;
 }
+
+
+
+
+
 
 calculaValorProdutoComDesconto(
     double precoDoProduto, double valorDoDescontoProduto) {
@@ -72,6 +92,11 @@ calculaValorProdutoComDesconto(
 
   return valorDoProdutoComDesconto;
 }
+
+
+
+
+
 
 calculaValorDescontadoDoProduto(
     double precoDoProduto, double valorDoDescontoProduto) {
