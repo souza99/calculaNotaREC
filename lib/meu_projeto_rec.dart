@@ -98,9 +98,4 @@ calculaValorProdutoComDesconto(
 
 
 
-calculaValorDescontadoDoProduto(
-    double precoDoProduto, double valorDoDescontoProduto) {
-  double valorDescontado = precoDoProduto * (valorDoDescontoProduto / 100);
-
-  return valorDescontado;
-}
+calculaValorDescontadoDoProduto(double precoDoProduto, double valorDoDescontoProduto) =>precoDoProduto * (valorDoDescontoProduto / 100);
